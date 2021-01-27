@@ -31,8 +31,9 @@ window.addEventListener("load", (event) => {
     const player = ruffle.createPlayer();
     const container = document.getElementById("container");
     container.appendChild(player);
-    if(getQueryVariable("id"))
-      player.load(getQueryVariable("id")+".swf");
+    var id = getQueryVariable("id");
+    if(!id) id = Math.floor(Math.random() * Math.floor(69)) + 1;
+    player.load(getQueryVariable("id")+".swf");
 });
 </script>
 <script src="ruffle.js"></script>
